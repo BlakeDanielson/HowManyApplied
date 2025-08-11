@@ -52,10 +52,7 @@ The extension does all this automatically and shows the result instantly!
 When viewing a LinkedIn job posting, you'll see:
 
 ```
-┌─────────────────────────────────────┐
-│  🔢 1,247 TOTAL APPLICANTS         │
-│     (Automatically detected)        │
-└─────────────────────────────────────┘
+![alt text](https://github.com/BlakeDanielson/HowManyApplied/blob/main/Screenshot%202025-08-10%20201636.png "Total Applicants")
 ```
 
 ## 🎯 Benefits
