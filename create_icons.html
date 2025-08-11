@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Extension Icons</title>
+</head>
+<body>
+    <h2>LinkedIn Applicant Counter Icons</h2>
+    
+    <!-- 16x16 Icon -->
+    <canvas id="icon16" width="16" height="16"></canvas>
+    <br><br>
+    
+    <!-- 48x48 Icon -->
+    <canvas id="icon48" width="48" height="48"></canvas>
+    <br><br>
+    
+    <!-- 128x128 Icon -->
+    <canvas id="icon128" width="128" height="128"></canvas>
+    
+    <script>
+        function createIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#0077b5');
+            gradient.addColorStop(1, '#005885');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // Add border radius effect
+            ctx.globalCompositeOperation = 'destination-in';
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, size * 0.2);
+            ctx.fill();
+            
+            ctx.globalCompositeOperation = 'source-over';
+            
+            // Add text/number
+            ctx.fillStyle = 'white';
+            ctx.font = `bold ${size * 0.4}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('#', size/2, size/2);
+            
+            // Download link
+            const link = document.createElement('a');
+            link.download = `icon${size}.png`;
+            link.href = canvas.toDataURL();
+            link.innerHTML = `Download ${size}x${size} icon`;
+            canvas.parentNode.insertBefore(link, canvas.nextSibling);
+            canvas.parentNode.insertBefore(document.createElement('br'), canvas.nextSibling);
+        }
+        
+        // Create all icons
+        createIcon('icon16', 16);
+        createIcon('icon48', 48);
+        createIcon('icon128', 128);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,106 @@
+/* LinkedIn Job Applicant Counter Styles */
+
+.linkedin-applicant-counter {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: linear-gradient(135deg, #0077b5, #005885);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 119, 181, 0.2);
+    border-left: 4px solid #00a0dc;
+    animation: slideInFromTop 0.5s ease-out;
+}
+
+.applicant-count-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+}
+
+.count-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.count-label {
+    font-size: 14px;
+    color: #e1f5fe;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Animation for when the counter appears */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .linkedin-applicant-counter {
+        margin-bottom: 12px;
+        padding: 10px;
+    }
+    
+    .count-number {
+        font-size: 20px;
+    }
+    
+    .count-label {
+        font-size: 12px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .linkedin-applicant-counter {
+        background: linear-gradient(135deg, #1a365d, #2c5282);
+        border-left-color: #3182ce;
+        box-shadow: 0 2px 8px rgba(49, 130, 206, 0.3);
+    }
+}
+
+/* Hover effect for interactivity */
+.linkedin-applicant-counter:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Loading state */
+.linkedin-applicant-counter.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Error state */
+.linkedin-applicant-counter.error {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    border-left-color: #f44336;
+}
+
+/* Success state enhancement */
+.linkedin-applicant-counter.success {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+    border-left-color: #4caf50;
+} 
