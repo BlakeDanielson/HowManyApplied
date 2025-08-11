@@ -51,9 +51,8 @@ The extension does all this automatically and shows the result instantly!
 
 When viewing a LinkedIn job posting, you'll see:
 
-```
-<img width="769" height="390" alt="Image" src="https://github.com/user-attachments/assets/8925f83a-4e42-4995-ab17-4a369c21ed00" />
-```
+![alt text](https://github.com/BlakeDanielson/HowManyApplied/blob/main/Screenshot%202025-08-10%20201636.png "Logo Title Text 1")
+
 
 ## 🎯 Benefits
 
