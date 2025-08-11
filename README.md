@@ -52,7 +52,7 @@ The extension does all this automatically and shows the result instantly!
 When viewing a LinkedIn job posting, you'll see:
 
 ```
-![alt text](https://github.com/BlakeDanielson/HowManyApplied/blob/main/Screenshot%202025-08-10%20201636.png "Total Applicants")
+![alt text](https://github.com/BlakeDanielson/HowManyApplied/blob/83bbe6ced5e05f7880cb4ee779cc59677916cfe2/Screenshot%202025-08-10%20201636.png "Total Applicants")
 ```
 
 ## 🎯 Benefits
