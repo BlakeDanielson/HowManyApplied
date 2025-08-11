@@ -125,10 +125,10 @@ Open browser developer tools and check console for messages starting with "Linke
 3. Go to `chrome://extensions/`
 4. Click "Reload" on the extension to test changes
 
-### Packaging for Chrome Web Store
-- Ensure the following files are included: `manifest.json`, `content.js`, `background.js`, `popup.html`, `popup.js`, `styles.css`, `icons/`
-- Exclude development helpers from the upload ZIP: `create_icons.html`, `test.js`
-- Include `PRIVACY.md` in the repository and reference it in the store listing privacy section
+### Packaging / Manual Install
+- Include: `manifest.json`, `content.js`, `background.js`, `popup.html`, `popup.js`, `styles.css`
+- Exclude dev helpers from ZIP: `create_icons.html`, `test.js`
+- Icons are optional for manual installs; if you add custom icons, update the `icons` section in `manifest.json` accordingly
 
 ### Testing
 - Test on various LinkedIn job postings
